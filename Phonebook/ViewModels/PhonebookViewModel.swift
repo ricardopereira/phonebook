@@ -81,11 +81,11 @@ class PhonebookViewModel {
             case let .success(contacts):
                 do {
                     try self?.database.store(contacts: contacts)
+                    self?.contacts = try self?.database.fetchContacts() ?? []
                 }
                 catch {
                     self?.errors = [error]
                 }
-                self?.contacts = contacts
             case let .failure(error):
                 self?.errors = [error]
             }

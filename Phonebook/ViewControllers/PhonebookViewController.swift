@@ -38,7 +38,7 @@ class PhonebookViewController: UITableViewController {
             changes: { [weak self] in
                 self?.tableView.reloadData()
                 // TODO: show in a dialog/view.
-                if let errors = self?.viewModel.errors {
+                if let errors = self?.viewModel.errors, !errors.isEmpty {
                     print(errors)
                 }
             }

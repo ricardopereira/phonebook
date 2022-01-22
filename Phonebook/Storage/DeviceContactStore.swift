@@ -49,8 +49,6 @@ class DeviceContactStore: ContactStore {
                             id: cnContact.identifier,
                             name: "\(cnContact.givenName) \(cnContact.familyName)",
                             phoneNumbers: [],
-                            // TODO: only update the date when the name of the contact of name had changed.
-                            // Logic: check if contact already exists and compare the information.
                             lastUpdated: Date()
                         )
                         for phoneNumber in cnContact.phoneNumbers {

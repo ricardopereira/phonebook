@@ -41,7 +41,7 @@ class DeviceDatabase: Database {
     }
 
     func prepare() throws {
-        // Define the database schema
+        // TODO: define the database schema with CodingKeys to avoid having field names in different places.
         try activeQueue.write { db in
             try db.create(table: "person", ifNotExists: true) { t in
                 t.column("personid", .text).notNull().unique().primaryKey()
@@ -59,10 +59,20 @@ class DeviceDatabase: Database {
     func store(contacts: [Contact]) throws {
         try activeQueue.write { db in
             for contact in contacts {
+                var lastUpdatedDate = Date()
+
+                if let existingPerson = try Person.fetchOne(db, key: ["personid": contact.id]) {
+                    let existingPersonPhoneNumbers = try existingPerson.phoneNumbers.fetchAll(db).map({ $0.value })
+                    let noChangeDetected = existingPerson.personName == contact.name && existingPersonPhoneNumbers.elementsEqual(contact.phoneNumbers)
+                    if noChangeDetected {
+                        lastUpdatedDate = existingPerson.lastUpdated
+                    }
+                }
+
                 let person = Person(
                     personId: contact.id,
                     personName: contact.name,
-                    lastUpdated: contact.lastUpdated
+                    lastUpdated: lastUpdatedDate
                 )
                 try person.save(db)
                 for phoneNumber in contact.phoneNumbers {
