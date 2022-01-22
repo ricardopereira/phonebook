@@ -9,13 +9,28 @@
 /* Begin PBXBuildFile section */
 		D7827AC6279C19AD005C7567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AC5279C19AD005C7567 /* AppDelegate.swift */; };
 		D7827AC8279C19AD005C7567 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AC7279C19AD005C7567 /* SceneDelegate.swift */; };
-		D7827ACA279C19AD005C7567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AC9279C19AD005C7567 /* ViewController.swift */; };
+		D7827ACA279C19AD005C7567 /* PhonebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AC9279C19AD005C7567 /* PhonebookViewController.swift */; };
 		D7827ACF279C19AE005C7567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7827ACE279C19AE005C7567 /* Assets.xcassets */; };
 		D7827AD2279C19AE005C7567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7827AD0279C19AE005C7567 /* LaunchScreen.storyboard */; };
 		D7827ADD279C19AE005C7567 /* PhonebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827ADC279C19AE005C7567 /* PhonebookTests.swift */; };
 		D7827AE7279C19AE005C7567 /* PhonebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AE6279C19AE005C7567 /* PhonebookUITests.swift */; };
 		D7827AE9279C19AE005C7567 /* PhonebookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AE8279C19AE005C7567 /* PhonebookUITestsLaunchTests.swift */; };
 		D7827AF7279C2374005C7567 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D7827AF6279C2374005C7567 /* GRDB */; };
+		D7827AF9279C3466005C7567 /* PhonebookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AF8279C3466005C7567 /* PhonebookViewModel.swift */; };
+		D7827AFB279C3478005C7567 /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AFA279C3478005C7567 /* ContactStore.swift */; };
+		D7827AFD279C3496005C7567 /* DeviceContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AFC279C3496005C7567 /* DeviceContactStore.swift */; };
+		D7827AFF279C34AC005C7567 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AFE279C34AC005C7567 /* Contact.swift */; };
+		D7827B01279C34B9005C7567 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B00279C34B9005C7567 /* Database.swift */; };
+		D7827B03279C34E0005C7567 /* DeviceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B02279C34E0005C7567 /* DeviceDatabase.swift */; };
+		D7827B05279C3759005C7567 /* ContactStoreAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B04279C3759005C7567 /* ContactStoreAuthorizationStatus.swift */; };
+		D7827B07279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B06279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift */; };
+		D7827B09279C3A2B005C7567 /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AFA279C3478005C7567 /* ContactStore.swift */; };
+		D7827B0A279C3A2D005C7567 /* ContactStoreAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B04279C3759005C7567 /* ContactStoreAuthorizationStatus.swift */; };
+		D7827B0B279C3A30005C7567 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AFE279C34AC005C7567 /* Contact.swift */; };
+		D7827B0C279C3A34005C7567 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B00279C34B9005C7567 /* Database.swift */; };
+		D7827B0D279C3A36005C7567 /* PhonebookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AF8279C3466005C7567 /* PhonebookViewModel.swift */; };
+		D7827B12279C3FD8005C7567 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */; };
+		D7827B13279C3FD8005C7567 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +54,7 @@
 		D7827AC2279C19AD005C7567 /* Phonebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phonebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7827AC5279C19AD005C7567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7827AC7279C19AD005C7567 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7827AC9279C19AD005C7567 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7827AC9279C19AD005C7567 /* PhonebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookViewController.swift; sourceTree = "<group>"; };
 		D7827ACE279C19AE005C7567 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7827AD1279C19AE005C7567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7827AD3279C19AE005C7567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +63,15 @@
 		D7827AE2279C19AE005C7567 /* PhonebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhonebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7827AE6279C19AE005C7567 /* PhonebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookUITests.swift; sourceTree = "<group>"; };
 		D7827AE8279C19AE005C7567 /* PhonebookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7827AF8279C3466005C7567 /* PhonebookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonebookViewModel.swift; sourceTree = "<group>"; };
+		D7827AFA279C3478005C7567 /* ContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStore.swift; sourceTree = "<group>"; };
+		D7827AFC279C3496005C7567 /* DeviceContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceContactStore.swift; sourceTree = "<group>"; };
+		D7827AFE279C34AC005C7567 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		D7827B00279C34B9005C7567 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		D7827B02279C34E0005C7567 /* DeviceDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDatabase.swift; sourceTree = "<group>"; };
+		D7827B04279C3759005C7567 /* ContactStoreAuthorizationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStoreAuthorizationStatus.swift; sourceTree = "<group>"; };
+		D7827B06279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactStoreAuthorizationStatus+Device.swift"; sourceTree = "<group>"; };
+		D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +125,16 @@
 			children = (
 				D7827AC5279C19AD005C7567 /* AppDelegate.swift */,
 				D7827AC7279C19AD005C7567 /* SceneDelegate.swift */,
-				D7827AC9279C19AD005C7567 /* ViewController.swift */,
+				D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */,
+				D7827AC9279C19AD005C7567 /* PhonebookViewController.swift */,
+				D7827AF8279C3466005C7567 /* PhonebookViewModel.swift */,
+				D7827AFA279C3478005C7567 /* ContactStore.swift */,
+				D7827B04279C3759005C7567 /* ContactStoreAuthorizationStatus.swift */,
+				D7827AFC279C3496005C7567 /* DeviceContactStore.swift */,
+				D7827B06279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift */,
+				D7827AFE279C34AC005C7567 /* Contact.swift */,
+				D7827B00279C34B9005C7567 /* Database.swift */,
+				D7827B02279C34E0005C7567 /* DeviceDatabase.swift */,
 				D7827ACE279C19AE005C7567 /* Assets.xcassets */,
 				D7827AD0279C19AE005C7567 /* LaunchScreen.storyboard */,
 				D7827AD3279C19AE005C7567 /* Info.plist */,
@@ -262,9 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7827ACA279C19AD005C7567 /* ViewController.swift in Sources */,
+				D7827B05279C3759005C7567 /* ContactStoreAuthorizationStatus.swift in Sources */,
+				D7827AFD279C3496005C7567 /* DeviceContactStore.swift in Sources */,
+				D7827B07279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift in Sources */,
+				D7827ACA279C19AD005C7567 /* PhonebookViewController.swift in Sources */,
+				D7827AF9279C3466005C7567 /* PhonebookViewModel.swift in Sources */,
+				D7827B03279C34E0005C7567 /* DeviceDatabase.swift in Sources */,
 				D7827AC6279C19AD005C7567 /* AppDelegate.swift in Sources */,
 				D7827AC8279C19AD005C7567 /* SceneDelegate.swift in Sources */,
+				D7827AFB279C3478005C7567 /* ContactStore.swift in Sources */,
+				D7827B01279C34B9005C7567 /* Database.swift in Sources */,
+				D7827B12279C3FD8005C7567 /* NavigationCoordinator.swift in Sources */,
+				D7827AFF279C34AC005C7567 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7827B0B279C3A30005C7567 /* Contact.swift in Sources */,
+				D7827B0A279C3A2D005C7567 /* ContactStoreAuthorizationStatus.swift in Sources */,
+				D7827B09279C3A2B005C7567 /* ContactStore.swift in Sources */,
+				D7827B0C279C3A34005C7567 /* Database.swift in Sources */,
 				D7827ADD279C19AE005C7567 /* PhonebookTests.swift in Sources */,
+				D7827B0D279C3A36005C7567 /* PhonebookViewModel.swift in Sources */,
+				D7827B13279C3FD8005C7567 /* NavigationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
