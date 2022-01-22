@@ -49,10 +49,16 @@ class DeviceContactStore: ContactStore {
                             id: cnContact.identifier,
                             name: "\(cnContact.givenName) \(cnContact.familyName)",
                             phoneNumbers: [],
+                            // TODO: only update the date when the name of the contact of name had changed.
+                            // Logic: check if contact already exists and compare the information.
                             lastUpdated: Date()
                         )
                         for phoneNumber in cnContact.phoneNumbers {
-                            contact.phoneNumbers.append(phoneNumber.value.stringValue)
+                            let value = phoneNumber.value.stringValue
+                            if !self.isPhoneNumberValid(value) {
+                                continue
+                            }
+                            contact.phoneNumbers.append(self.normalizePhoneNumber(value))
                         }
                         contacts.append(contact)
                     }
@@ -63,6 +69,22 @@ class DeviceContactStore: ContactStore {
                 completionHandler(.failure(error))
             }
         }
+    }
+
+    func isPhoneNumberValid(_ phoneNumber: String) -> Bool {
+        // Check the length is between 9 and 15 characters
+        let length = phoneNumber.lengthOfBytes(using: .utf8)
+        if length < 9 || length > 15 {
+            return false
+        }
+        // Only contains numbers and the following characters: + ( ) . . -
+        // TODO
+        return true
+    }
+
+    func normalizePhoneNumber(_ phoneNumber: String) -> String {
+        // Remove any spaces
+        return phoneNumber.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
 }
