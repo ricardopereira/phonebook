@@ -30,7 +30,11 @@
 		D7827B0C279C3A34005C7567 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B00279C34B9005C7567 /* Database.swift */; };
 		D7827B0D279C3A36005C7567 /* PhonebookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AF8279C3466005C7567 /* PhonebookViewModel.swift */; };
 		D7827B12279C3FD8005C7567 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */; };
-		D7827B13279C3FD8005C7567 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */; };
+		D7827B15279C4C62005C7567 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B14279C4C62005C7567 /* ContactCell.swift */; };
+		D7827B16279C4C62005C7567 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B14279C4C62005C7567 /* ContactCell.swift */; };
+		D7827B18279C51E2005C7567 /* DeviceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B02279C34E0005C7567 /* DeviceDatabase.swift */; };
+		D7827B1B279C521F005C7567 /* ContactStoreAuthorizationStatus+Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827B06279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift */; };
+		D7827B1C279C521F005C7567 /* DeviceContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AFC279C3496005C7567 /* DeviceContactStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,7 @@
 		D7827B04279C3759005C7567 /* ContactStoreAuthorizationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStoreAuthorizationStatus.swift; sourceTree = "<group>"; };
 		D7827B06279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactStoreAuthorizationStatus+Device.swift"; sourceTree = "<group>"; };
 		D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		D7827B14279C4C62005C7567 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,16 +130,11 @@
 			children = (
 				D7827AC5279C19AD005C7567 /* AppDelegate.swift */,
 				D7827AC7279C19AD005C7567 /* SceneDelegate.swift */,
-				D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */,
-				D7827AC9279C19AD005C7567 /* PhonebookViewController.swift */,
-				D7827AF8279C3466005C7567 /* PhonebookViewModel.swift */,
-				D7827AFA279C3478005C7567 /* ContactStore.swift */,
-				D7827B04279C3759005C7567 /* ContactStoreAuthorizationStatus.swift */,
-				D7827AFC279C3496005C7567 /* DeviceContactStore.swift */,
-				D7827B06279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift */,
-				D7827AFE279C34AC005C7567 /* Contact.swift */,
-				D7827B00279C34B9005C7567 /* Database.swift */,
-				D7827B02279C34E0005C7567 /* DeviceDatabase.swift */,
+				D7827B1D279C5236005C7567 /* ViewControllers */,
+				D7827B1E279C5241005C7567 /* Views */,
+				D7827B1A279C51F3005C7567 /* ViewModels */,
+				D7827B19279C51E7005C7567 /* Models */,
+				D7827B17279C51D1005C7567 /* Storage */,
 				D7827ACE279C19AE005C7567 /* Assets.xcassets */,
 				D7827AD0279C19AE005C7567 /* LaunchScreen.storyboard */,
 				D7827AD3279C19AE005C7567 /* Info.plist */,
@@ -157,6 +157,52 @@
 				D7827AE8279C19AE005C7567 /* PhonebookUITestsLaunchTests.swift */,
 			);
 			path = PhonebookUITests;
+			sourceTree = "<group>";
+		};
+		D7827B17279C51D1005C7567 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D7827AFA279C3478005C7567 /* ContactStore.swift */,
+				D7827B04279C3759005C7567 /* ContactStoreAuthorizationStatus.swift */,
+				D7827AFC279C3496005C7567 /* DeviceContactStore.swift */,
+				D7827B06279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift */,
+				D7827B00279C34B9005C7567 /* Database.swift */,
+				D7827B02279C34E0005C7567 /* DeviceDatabase.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		D7827B19279C51E7005C7567 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7827AFE279C34AC005C7567 /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7827B1A279C51F3005C7567 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D7827AF8279C3466005C7567 /* PhonebookViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D7827B1D279C5236005C7567 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D7827B11279C3FD8005C7567 /* NavigationCoordinator.swift */,
+				D7827AC9279C19AD005C7567 /* PhonebookViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D7827B1E279C5241005C7567 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7827B14279C4C62005C7567 /* ContactCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +344,7 @@
 				D7827B05279C3759005C7567 /* ContactStoreAuthorizationStatus.swift in Sources */,
 				D7827AFD279C3496005C7567 /* DeviceContactStore.swift in Sources */,
 				D7827B07279C3A14005C7567 /* ContactStoreAuthorizationStatus+Device.swift in Sources */,
+				D7827B15279C4C62005C7567 /* ContactCell.swift in Sources */,
 				D7827ACA279C19AD005C7567 /* PhonebookViewController.swift in Sources */,
 				D7827AF9279C3466005C7567 /* PhonebookViewModel.swift in Sources */,
 				D7827B03279C34E0005C7567 /* DeviceDatabase.swift in Sources */,
@@ -314,13 +361,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7827B16279C4C62005C7567 /* ContactCell.swift in Sources */,
 				D7827B0B279C3A30005C7567 /* Contact.swift in Sources */,
+				D7827B1B279C521F005C7567 /* ContactStoreAuthorizationStatus+Device.swift in Sources */,
 				D7827B0A279C3A2D005C7567 /* ContactStoreAuthorizationStatus.swift in Sources */,
+				D7827B18279C51E2005C7567 /* DeviceDatabase.swift in Sources */,
 				D7827B09279C3A2B005C7567 /* ContactStore.swift in Sources */,
 				D7827B0C279C3A34005C7567 /* Database.swift in Sources */,
 				D7827ADD279C19AE005C7567 /* PhonebookTests.swift in Sources */,
+				D7827B1C279C521F005C7567 /* DeviceContactStore.swift in Sources */,
 				D7827B0D279C3A36005C7567 /* PhonebookViewModel.swift in Sources */,
-				D7827B13279C3FD8005C7567 /* NavigationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

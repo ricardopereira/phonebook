@@ -13,6 +13,16 @@ class PhonebookViewModel {
     private let database: Database
     private var mimicChangesObservableEvent: (() -> Void)?
 
+    lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = .current
+        dateFormatter.calendar = .current
+        dateFormatter.locale = .current
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+        return dateFormatter
+    }()
+
     private(set) var contacts: [Contact] {
         didSet {
             mimicChangesObservableEvent?()
