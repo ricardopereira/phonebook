@@ -15,6 +15,7 @@
 		D7827ADD279C19AE005C7567 /* PhonebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827ADC279C19AE005C7567 /* PhonebookTests.swift */; };
 		D7827AE7279C19AE005C7567 /* PhonebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AE6279C19AE005C7567 /* PhonebookUITests.swift */; };
 		D7827AE9279C19AE005C7567 /* PhonebookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7827AE8279C19AE005C7567 /* PhonebookUITestsLaunchTests.swift */; };
+		D7827AF7279C2374005C7567 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = D7827AF6279C2374005C7567 /* GRDB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7827AF7279C2374005C7567 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +142,9 @@
 			dependencies = (
 			);
 			name = Phonebook;
+			packageProductDependencies = (
+				D7827AF6279C2374005C7567 /* GRDB */,
+			);
 			productName = Phonebook;
 			productReference = D7827AC2279C19AD005C7567 /* Phonebook.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +217,9 @@
 				Base,
 			);
 			mainGroup = D7827AB9279C19AD005C7567;
+			packageReferences = (
+				D7827AF5279C2374005C7567 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			productRefGroup = D7827AC3279C19AD005C7567 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -590,6 +598,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D7827AF5279C2374005C7567 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D7827AF6279C2374005C7567 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7827AF5279C2374005C7567 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7827ABA279C19AD005C7567 /* Project object */;
 }
